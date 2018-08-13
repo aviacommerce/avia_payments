@@ -1,8 +1,10 @@
 defmodule SnitchPaymentsTest do
   use ExUnit.Case
+  alias SnitchPayments
   doctest SnitchPayments
 
-  test "greets the world" do
-    assert SnitchPayments.hello() == :world
+  test "list all payment methods" do
+    list = SnitchPayments.payment_providers()
+    assert length(list) == 2
   end
 end
