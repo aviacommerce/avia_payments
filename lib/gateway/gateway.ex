@@ -8,4 +8,5 @@ defmodule SnitchPayments.Gateway do
 
   @callback credentials() :: list
   @callback payment_code() :: list
+  @callback parse_response(map) :: SnitchPayments.Response.t()
 end

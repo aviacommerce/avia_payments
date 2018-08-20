@@ -33,4 +33,8 @@ defmodule SnitchPayments.PaymentMethodCode do
   def cash_on_delivery do
     @cash_on_delivery
   end
+
+  def payment_types do
+    [@credit_card, @hosted_payment, @cash_on_delivery, @store_credit]
+  end
 end
