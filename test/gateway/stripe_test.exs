@@ -2,8 +2,8 @@ defmodule SnitchPayments.Gateway.StripeTest do
   use ExUnit.Case
   alias SnitchPayments.Gateway.Stripe
 
-  test "credentials/0 returns credentials for stripe" do
-    [key | _] = Stripe.credentials()
+  test "preferences/0 returns credentials for stripe" do
+    [key | _] = Stripe.preferences()
     assert key == :secret_key
   end
 

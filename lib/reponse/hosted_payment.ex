@@ -11,7 +11,8 @@ defmodule SnitchPayments.Response.HostedPayment do
     :raw_response,
     :status,
     :order_id,
-    :payment_id
+    :payment_id,
+    :error_reason
   ]
 
   @typedoc """
@@ -29,6 +30,8 @@ defmodule SnitchPayments.Response.HostedPayment do
   | `order_id`      | non_neg_integer  | `id` of the `order`                    |
   | `payment_id`    | non_neg_integer  | `id` of the `payment` to be updated with
                                          the response.
+  | `error_reason`  | String.t()       | In case payment fails the reason depicts
+                                         the reason for failure.
   """
   @type t :: %__MODULE__{
     payment_source: String.t(),
@@ -36,6 +39,7 @@ defmodule SnitchPayments.Response.HostedPayment do
     raw_response: map,
     status: String.t(),
     order_id: non_neg_integer,
-    payment_id: non_neg_integer
+    payment_id: non_neg_integer,
+    error_reason: String.t()
   }
 end

@@ -14,14 +14,14 @@ defmodule SnitchPayments.Gateway.PayuBiz do
   @live_url "https://secure.payu.in/_payment"
 
   @doc """
-  Returns a list of credentials.
+  Returns the preferences for the gateway, at present it is mainly the
+  list of credentials.
 
-  The `credentials` provided by a `paubiz`
-  to a seller on account creation are required while
-  performing a transaction.
+  These `credentials` refer to one provided by a `paubiz` to a seller on
+  account creation.
   """
-  @spec credentials() :: list
-  def credentials do
+  @spec preferences() :: list
+  def preferences do
     @credentials
   end
 

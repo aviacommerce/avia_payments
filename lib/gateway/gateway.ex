@@ -6,7 +6,7 @@ defmodule SnitchPayments.Gateway do
   by all the modules adopting the behavior.
   """
 
-  @callback credentials() :: list
+  @callback preferences() :: list
   @callback payment_code() :: list
   @callback parse_response(map) :: SnitchPayments.Response.t()
 end

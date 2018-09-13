@@ -21,7 +21,7 @@ defmodule SnitchPayments do
   end
 
   @doc """
-  Parsed the `param` supplied and returns a struct
+  Parses the `params` supplied and returns a struct
   depending on the type of payment gateway used for
   transaction.
 
@@ -36,7 +36,7 @@ defmodule SnitchPayments do
   defp payment_provider_filter(gateway) do
     key_list = gateway |> Module.split()
     key_word = Enum.find(key_list, fn key ->
-      key == "Gateway"
+      key == "Gateway" || key == "CashOnDelivery"
     end)
 
     length(key_list) >= 3 and key_word != nil

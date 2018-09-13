@@ -24,6 +24,6 @@ defmodule SnitchPayments.Provider do
   end
 
   def module("stripe") do
-    Elixir.SnitchPayments.Gateway.PayuBiz
+    Elixir.SnitchPayments.Gateway.Stripe
   end
 end

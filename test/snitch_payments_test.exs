@@ -5,7 +5,7 @@ defmodule SnitchPaymentsTest do
 
   test "list all payment methods" do
     list = SnitchPayments.payment_providers()
-    assert length(list) == 2
+    assert length(list) == 3
   end
 
 end

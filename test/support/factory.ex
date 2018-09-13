@@ -4,6 +4,7 @@ defmodule SnitchPayments.Factory do
     %{
       "source" => "payubiz",
       "order_id" => "1",
+      "order_number" => "abcd123",
       "payment_id" => "1",
       "cardnum" => "401200XXXXXX1112",
       "productinfo" => "tshirt100",
@@ -21,7 +22,7 @@ defmodule SnitchPayments.Factory do
       "bankcode" => "CC",
       "net_amount_debit" => "100",
       "email" => "gopal@aviabird.com",
-      "card_type" => "VISA",
+      "card_type" => "VISA"
     }
   end
 end
