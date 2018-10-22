@@ -1,4 +1,5 @@
 defmodule SnitchPayments.Factory do
+  use SnitchPayments.Factory.Stripe
 
   def payubiz_success_response(_context) do
     %{
@@ -10,7 +11,8 @@ defmodule SnitchPayments.Factory do
       "productinfo" => "tshirt100",
       "amount" => "100.00",
       "name_on_card" => "Test",
-      "hash" => "3c131dd06da0443a2833229db430f08e9ab0125cdf0eb458d9729c4516bdecc1c1d7c99f67cfd6e0577e98b5124047d54f87d36c52f91885d19ab4dfe1424b8e",
+      "hash" =>
+        "3c131dd06da0443a2833229db430f08e9ab0125cdf0eb458d9729c4516bdecc1c1d7c99f67cfd6e0577e98b5124047d54f87d36c52f91885d19ab4dfe1424b8e",
       "payment_source" => "payu",
       "error_Message" => "No Error",
       "firstname" => "Gopal",

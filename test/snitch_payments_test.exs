@@ -7,5 +7,4 @@ defmodule SnitchPaymentsTest do
     list = SnitchPayments.payment_providers()
     assert length(list) == 3
   end
-
 end

@@ -49,7 +49,6 @@ defmodule SnitchPayments.Gateway.PayuBiz do
     Map.merge(%HostedPayment{}, params)
   end
 
-
   @doc """
   Returns the `test` and `live` `urls` for payubiz
   hosted payment.
@@ -65,7 +64,7 @@ defmodule SnitchPayments.Gateway.PayuBiz do
   defp filter_payubiz_params(params) do
     %{
       transaction_id: params["mihpayid"],
-      payment_source: params["source"],
+      payment_source: params["payment_source"],
       raw_response: params,
       status: params["status"],
       order_id: String.to_integer(params["order_id"]),

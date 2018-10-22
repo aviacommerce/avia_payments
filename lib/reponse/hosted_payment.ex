@@ -34,12 +34,12 @@ defmodule SnitchPayments.Response.HostedPayment do
                                          the reason for failure.
   """
   @type t :: %__MODULE__{
-    payment_source: String.t(),
-    transaction_id: String.t(),
-    raw_response: map,
-    status: String.t(),
-    order_id: non_neg_integer,
-    payment_id: non_neg_integer,
-    error_reason: String.t()
-  }
+          payment_source: String.t(),
+          transaction_id: String.t(),
+          raw_response: map,
+          status: String.t(),
+          order_id: non_neg_integer,
+          payment_id: non_neg_integer,
+          error_reason: String.t()
+        }
 end
