@@ -17,7 +17,7 @@ defmodule SnitchPayments.Gateway.PayuBiz do
   Returns the preferences for the gateway, at present it is mainly the
   list of credentials.
 
-  These `credentials` refer to one provided by a `paubiz` to a seller on
+  These `credentials` refer to one provided by a `payubiz` to a seller on
   account creation.
   """
   @spec preferences() :: list

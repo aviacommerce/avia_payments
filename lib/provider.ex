@@ -16,6 +16,7 @@ defmodule SnitchPayments.Provider do
     case gateway do
       :payubiz -> "payubiz"
       :stripe -> "stripe"
+      :rzpay -> "razor_pay"
     end
   end
 
@@ -25,5 +26,9 @@ defmodule SnitchPayments.Provider do
 
   def module("stripe") do
     Elixir.SnitchPayments.Gateway.Stripe
+  end
+
+  def module("razor_pay") do
+    Elixir.SnitchPayments.Gateway.RazorPay
   end
 end

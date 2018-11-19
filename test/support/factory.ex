@@ -1,5 +1,5 @@
 defmodule SnitchPayments.Factory do
-  use SnitchPayments.Factory.Stripe
+  use SnitchPayments.Factory.{Stripe, RazorPay}
 
   def payubiz_success_response(_context) do
     %{
